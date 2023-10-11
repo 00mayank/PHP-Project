@@ -1,0 +1,895 @@
+@font-face {
+    font-family: "Nikkei";
+    src: url("../fonts/NikkeiMaruTrial-Bold.otf");
+    font-family: "travel";
+    src:url("../fonts/Raleway-VariableFont_wght.ttf");
+    font-family: "list";
+    src:url("../fonts/AlegreyaSans-Regular.ttf")
+
+}
+
+body
+{
+    margin:0 auto;
+    height:570vh;
+    background-color: antiquewhite;
+    scrollbar-color: rgb(170, 31, 31);
+    cursor: none;
+}
+.firstHead{
+    width:100vw;
+    height:8vh;
+    position: fixed;
+    z-index: 1111;
+    margin-top:0;
+    margin-left:0;
+    background-color:whitesmoke;
+    padding-left: 3vw;
+    padding-top:.5vh;
+    padding-right: 3vw;
+    transition: all ease-in-out 200ms;
+    cursor: default;
+   
+
+}
+.item ul a{
+    text-decoration: none;
+    color: black;
+    cursor:pointer;
+}
+
+.innerFlex{
+    display: flex;
+    justify-content:row;
+    align-items: center;
+}
+.logo{
+    font-family: "travel";
+    font-size:5vh;
+    color: rgb(83, 83, 83);
+    position: absolute;
+    text-decoration: none;
+    margin-top:-1.2vh;
+    transition: all ease-in-out 350ms;
+}
+.logo b{
+    color: #c0392b;
+    font-weight: 549;
+}
+.logo:hover{
+    font-size: 5.05vh;
+    color:#c0392b;
+    
+}
+.logo:hover b{
+    color: rgb(83, 83, 83);
+}
+.item{
+    width:40vw;
+    margin-left: 50vw;
+    margin-right: 10vw;
+}
+.item ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    font-family: "calibri";
+    font-size: 2.5vh;
+    font-weight: 500;
+}
+.item ul a:hover{
+    color: rgba(0, 0, 0, 0.738);
+}
+.hoverLine::after{
+    content:"";
+    height:.2vh;
+    width:0;
+    border-radius: .2vh;
+    display: block;
+    margin-top: 1vh;
+    background-color: #c0392b ;
+    transition: width .3s;
+}
+.hoverLine:hover::after{
+    width:115%;
+}
+.hoverLine:hover .fa{
+  color: #c0392b;
+}
+
+.fa-user{
+  margin-right:0.2vw;
+  color:rgb(0, 0, 0);
+}
+.pointer{
+    height:50px;
+    width:50px;
+    border:2px solid rgba(255, 255, 255, 0.366);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.523);
+    background-color: transparent;
+    border-radius: 100%;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top:0;
+    transform: translate(-50%,-50%);
+    transition: .1s;
+    z-index: 11;
+}
+.pointer2{
+    height:8px;
+    width:8px;
+    background-color:rgba(255, 255, 255, 0.618);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.523);
+    border-radius: 100%;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top:0;
+    z-index: 11;
+    transform: translate(-50%,-50%);
+}
+
+.first-section{
+    margin: 0 auto;
+    position: absolute;
+    height:215vh;
+    width:100vw;
+    background: linear-gradient(180deg, rgb(27, 215, 218), rgb(47, 149, 167));
+    cursor: none;
+}
+.first-section h1{
+    font-family: "travel";
+    font-weight: 200;
+    font-size: 14vh;
+    color: #fff;
+    padding-left: 6vw;
+    padding-top: 7vh;
+}
+.first-section:first-of-type p{
+    height: 15vh;
+    width:27vw;
+    font-weight: 50;
+    margin-top: -8vh;
+    margin-left: 7vw;
+    font-size: 2vh;
+    color: rgb(241, 242, 244);
+    letter-spacing: .1em;
+    font-family: "list";
+}
+.first-section:first-of-type b{
+    font-size: bolder;
+    font-weight: 900;
+    color:#fff
+}
+.first-section:first-of-type li{
+    width :15vw;
+    font-family: "list";
+    font-size: 2.5vh;
+    color: rgb(251, 252, 253);
+    line-height: 3.5vh;
+}
+.window-container{
+    display: grid;
+    height:150vh;
+    width:82vw;
+    padding-left: 7vw;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    z-index: 3;
+}
+.window{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 2px 6px 10px rgba(1, 1, 1, 0.385); */
+    background-color: rgb(254, 255, 182);
+    background-position: center;
+    background-size: cover;
+    image-resolution: 400px 600px;
+    filter: blur(1)  contrast(170%) drop-shadow(8px 8px 8px rgb(112, 111, 111));
+    transition: all ease-in-out 600ms;
+    font-family: "Nikkei";
+    font-size: 2.5vh;
+    color: rgb(246, 246, 246);
+    -webkit-filter: drop-shadow(8px 8px 8px rgb(69, 68, 68) );
+    z-index: 3;
+}
+.one{
+    grid-row: 3 / span 2;
+    background-image: url("../asset/one.jpg");
+    background-position-y: center;
+}
+.two
+{
+    grid-row:  span 3;
+    background-image: url("../asset/two.jpg");
+}
+.three{
+    grid-row: 4 / span 2;
+    grid-column: 2 / span 1;
+    background-image: url("../asset/three.jpg");
+    background-position-y: center;
+}
+.four{
+    grid-row: 3 / span 2;
+    background-image: url("../asset/four.jpg");
+    background-position-y: center ;
+
+
+}
+.five{
+    grid-row: 5 / span 3;
+    grid-column: 3 / span 1;
+    background-image: url("../asset/five.jpg");
+}
+.six{
+    grid-row:4 / span 3;
+    grid-column: 4 / span 1;
+    background-image: url("../asset/six.jpg");
+}
+.detail{
+    grid-row:1 / span 3;
+    grid-column: 4 / span 1;
+    background-color: transparent;
+    filter: drop-shadow(none);
+    box-shadow: none;
+    text-align: top;
+   
+}
+.detail li:hover{
+
+    font-size:2.6vh ;
+    color:antiquewhite;
+    filter: drop-shadow(none);
+    cursor: none;
+}
+.window.medium:hover{
+    filter:brightness(100%) drop-shadow(8px 8px 8px rgb(67, 64, 64));
+    transform: scale(1.031);
+    
+}
+.window.tall:hover{
+    filter:brightness(100%) drop-shadow(8px 8px 8px rgb(79, 77, 77));
+    transform: scale(1.03);
+}
+.second-section{
+    height: 100vh;
+    width: 100vw;
+    position:absolute;
+    background-color:antiquewhite ;
+    margin-top: 480vh;
+    margin-left:0;
+    font-family: "list";
+    
+}
+.subSection{
+    height:45vh;
+    width:30vw;
+    margin-top:28vh;
+    margin-left:10vh;
+}
+.second-section h2{
+    font-weight: 200;
+    font-size: 5.6vh;
+    color: rgb(82, 81, 81);
+    text-align: center;
+}
+.subSection button{
+    height:6vh;
+    width:12vw;
+    margin-top: 7vh;
+    background-color: rgb(82, 81, 81);
+    margin-left:9vw;
+    border: 2px solid rgb(82, 81, 81);
+    color: whitesmoke;
+    border-radius: .2vh;
+    font-family: "calibri";
+    font-size: 2.25vh;
+    font-weight: 400;
+    text-align: center;
+    transition: all ease-in-out 500ms;
+}
+.subSection button:hover{
+    background-color: #c0392b;
+    border: 2px solid white;
+    color:white;
+}
+.subSection p{
+    font-size: 2.1vh;
+    font-family: "list";
+    letter-spacing: .1em;
+    width: 26vw;
+    margin-top: 7vh;
+    margin-left: 3vw;
+    text-align: center;
+    color : rgb(82, 81, 81);
+}
+.subSection2{
+    height:75vh;
+    width:45vw;
+    margin-left:50vw;
+    margin-top: -68vh;
+    z-index: -1;
+
+}
+.subSection2::after{
+    content: "";
+    height: 45vh;
+    width:25vw;
+    background-image: url("../asset/subSection.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    margin-top: -85vh;
+    margin-left:6vw;
+    display: block;
+    z-index:10;
+    box-shadow: 0 3px 5px rgb(55, 55, 55);
+}
+.third-section{
+    height:100vh;
+    width:100vw;
+    background-image: url("../asset/sectionThree.jpg");
+    background-position-y: -500px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin-top: 380vh;
+    margin-left: 0;
+    position: absolute;
+}
+/* .third-section::before{
+    content:"";
+    height:120vh;
+    width:100vw; */
+    /* background-image: url("../asset/sectionThree.jpg"); */
+    /* background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.0), rgba(128, 128, 128, 0.492));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-left: 0;
+    position: absolute;
+    z-index:-12;
+    
+} */
+.scroll_down header{
+    transform: translate3d(0, -100%,0);
+}
+.scroll_up header{
+
+}
+
+.elem-group {
+    margin-left: 6.7%;
+    margin-top: 16px;
+  }
+  
+.elem-group.inlined {
+    width: 40%;
+    display: inline-block;
+    float:left;
+    margin-left:6.7%;
+    margin-top:18px;
+    margin-bottom: 2px;
+  }
+  
+  .BookAvailabilty_Label{
+    display: block;
+    font-size: 2.3vh;
+    font-family: "calibri";
+    position: absolute;
+    color:rgb(77, 76, 76);
+    font-weight: 400;
+    margin-top: 93px;
+    margin-left: .21vw;
+  }
+  
+  .elem-group input,.elem-group.inlined input,.elem-group select,.elem-group.inlined select{
+    border-radius: 2px;
+    margin-top: 40px;
+    outline:none;
+    border: 0;
+    font-family: 'list';
+    width:93.3%;
+    height: 37px;
+    cursor: none;
+    background-color: rgb(255, 255, 255);
+  }
+  .BookAvailabilty_Label::before{
+    content:"";
+    display: block;
+    background-color: rgb(255, 255, 255);
+    height:2vh;
+    width:2vh;
+    z-index: 11;
+    margin-top: -3.19vh;
+    margin-left: 0.32vw;
+    margin-bottom: .51vh;
+    transform: rotate(45deg);
+  }
+  
+  div.elem-group.inlined  input{
+    width: 100%;
+    display: inline-block;
+    margin-top: 40px;
+
+  }
+  
+  div.elem-group.inlined input[type="date"],div.elem-group.inlined input[type="number"],div.elem-group select{
+    font-size: 2.1vh;
+    font-weight: 400;
+    color: rgb(74, 72, 72);
+    padding-left: 0.51vw;
+    text-align: center;
+  }
+  
+  
+  button {
+    height:6vh;
+    width:17vw;
+    margin-top: 7vh;
+    background-color: rgba(5, 5, 5, 0.49);
+    margin-left:3.7vw;
+    border: 2px solid #fff;
+    color: whitesmoke;
+    font-family: "calibri";
+    font-size: 2.15vh;
+    text-align: center;
+    transition: all ease-in-out 500ms;
+  }
+  
+  button:hover {
+    background-color:#c03a2bb1;
+     
+    border-color: #f4f4f4b1;
+}
+
+  .Booking_form{
+    padding-top: 0%;
+    padding-left:2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    width:25%;
+    margin-left: 62%;
+    margin-top: 14%;
+    background-color:rgba(255, 255, 255, 0.655);
+    z-index: 12;
+    justify-content: center;
+  }
+.Booking_form h2{
+    font-size: 8.9vh;
+    color: #c0392b;
+    font-family: "Nikkei";
+    font-weight: 400;
+    text-align: left;
+    padding-top: 3vh;
+    width:12vw;
+    position: absolute;
+    margin-top: -9.9%;
+    margin-left:-4.73%;
+    text-shadow:0 1 3px #be4e42;
+    line-height: 6.40vh;
+}
+
+.Booking_form h4{
+
+    font-size: 2.4vh;
+    color: #fff;
+    font-family: "list";
+    text-align: left;
+    padding-top: 3vh;
+    position: absolute;
+    margin-top: -4%;
+    margin-left: -4.60%;
+    text-shadow:0 1px 0.51px rgb(48, 47, 47);
+}
+
+
+
+/* Page 2 */
+#page2 {
+    height: 70vh; 
+    width:100vw;
+    background-color:  rgb(49, 156, 174);
+    position: absolute;
+    margin-top: 200vh;
+ 
+    }
+    
+    #page2 h1 {
+     padding-top: 65px;
+     text-align: center;
+     color: #fff;
+     font-size: 150px;
+     font-family: 'Nikkei'; 
+     margin-top: 0vh;
+     margin-left: 25vw;
+    }
+    
+    .mondo {
+      margin-top: -44vh;
+      margin-left: 5.5vw;
+      width: 37%;
+      z-index: 1111;
+      filter: drop-shadow(11px 11px 9px  rgba(49, 118, 122, 0.584));
+    }
+    
+    /* Right */
+    
+    .sinistra {
+     width:40%;
+     float:right;
+     margin-top:-160px;
+     margin-right: 87px;
+     position: relative;
+        }
+    
+    #page2 h2 {
+     text-align: left;
+     color: #fff;
+     font-family: 'travel';
+     margin-right: 16px;
+     font-size:50px;
+     line-height: 1.1; 
+     
+     }
+    
+    p {
+      font-size: 1.82vh;
+      text-align: left;
+      font-family: "list";
+      margin-top: -18px;
+      margin-right: 131px;
+      line-height: 1.6;
+      letter-spacing: 0.013rem;
+      color:rgb(255, 255, 255);
+    }
+    
+    .bottone {
+     background-color: transparent;
+     font-family: 'calibri';
+      font-size: 14px;
+      background-color: rgba(255, 255, 255, 0.31);
+      color: #fff;
+      margin-top: 25px;
+      width: 45%;
+      border: 1px solid white;
+      padding: 10px;
+    }
+    
+    
+    .bottone:hover {
+     background-color:#c03a2bb1;
+     
+     border-color:#e3e3e3b1;
+    }
+    
+    /*Page3*/
+    
+    #page3 {
+    height: 90vh; 
+    width:82vw;
+    margin-top: 280vh;
+    margin-left:10vw;
+    position: absolute;
+    cursor:none;
+    
+    }
+    
+    .intro {
+     text-align: left;
+     color:rgb(46, 46, 46);
+     font-family: "list";
+     margin-left: 120px;
+     font-size:7.468vh;
+     z-index: -12;
+     position: relative;
+     }
+    
+    /*slider*/
+    
+    img {
+      max-width: 50%;
+    }
+    
+    .slider-container{
+      height: 70%;
+      width: 70%;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden; 
+      text-align: center;
+      z-index: 1;
+    }
+    
+    .menu {
+      position: absolute;
+      left: 0;
+      z-index: 900;
+      width: 100%;
+      bottom: 0;
+    }
+    
+    .menu label {
+      cursor: pointer;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      margin: 0 .2em 1em;
+      
+    }
+    
+    .menu label:hover {
+        background: #FAC778;
+      }
+    
+    .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      z-index: 10;
+      padding: 8em 1em 0;
+      background-size: cover;
+      background-position: 50% 50%;
+      transition: left 0s .75s;
+    }
+    
+    [id^="slide"]:checked + .slide {
+      left: 0;
+      z-index: 100;
+      transition: left .65s ease-out;
+    }
+    
+    .slide-1 {
+      background-image: url("https://www.colorbook.io/imagecreator.php?hex=ffa726&width=1920&height=1080");
+    }
+    
+    .top-left {
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        color: #fff;
+        font-size: 87px;
+        font-family: 'Secular One', sans-serif;
+        text-align: left;
+        margin-right: 90px;
+        line-height: 1em;
+    
+    }
+    
+    .tl {
+      margin-top: 20px;
+      margin-right: 320px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      text-align: left;
+      line-height: 1.6;
+      color:antiquewhite;
+    }
+    
+    .bottone1 {
+      background-color: #FAC778;
+      font-family: 'calibri';
+      font-size: 14px;
+      color: #fff;
+      margin-top: 20px;
+      width: 30%;
+      border: 1px solid white;
+      padding: 10px;
+      cursor:pointer;
+    }
+    
+    
+    .bottone1:hover {
+     background-color: transparent;
+    }
+    
+    
+    
+    .slide-2 {
+      background-image: url("https://www.colorbook.io/imagecreator.php?hex=ff5151&width=1920&height=1080");
+    }
+    .slide-3 {
+      background-image: url("https://www.colorbook.io/imagecreator.php?hex=0EDBD9&width=1920&height=1080");
+    }
+    
+    
+    .paper {
+      width: 40%;
+      margin-top: -20px;
+      margin-right: -270px;
+      -webkit-filter: drop-shadow(5px 5px 5px #222 );
+      filter: drop-shadow(5px 5px 5px #222);
+    }
+    
+    /* Page4 */
+    .last{
+      position: absolute;
+      width:100vw;
+      height: 95vh; 
+      margin-top:575vh;
+    }
+    #page4 {
+    height:100%;
+    width:100%;
+    background-color:rgb(48, 48, 48);
+    }
+    
+    .base{
+     text-align: left;
+     color:#fff;
+     font-family: 'Nikkei';
+     padding-top: 45px;
+     margin-right: 350px;
+     margin-left: 190px;
+     font-size:50px;
+     padding-bottom: 40px;
+     }
+    
+    table {
+      width: 85%;
+      margin: 0 auto;
+    }
+    
+     table, th, td {
+     text-align: center; 
+     border-right: 2px solid #FFF;
+     border-collapse: collapse;
+     padding-right: 15px;
+     padding-left: 15px;
+     color:#FFF;
+    }
+    
+    
+    table, th:last-child {
+      border-right: 0;
+    }
+    table, td:last-child {
+      border-right: 0;
+    }
+      
+    th {
+      font-family: 'Nikkei';
+      font-size: 50px;
+      color:#fff;
+    }
+    
+    #sin2 {
+     width:60%;
+     float:left;
+     margin-top:-320px;
+     margin-left: 190px;
+
+        }
+    
+    .business {
+      margin-top: 5px;
+      margin-right: 320px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      text-align: left;
+      line-height: 1.6;
+    }
+    
+    .bottone3 {
+     background-color:rgba(255, 255, 255, 0.364);
+     font-family: 'calibri';
+      font-size: 14px;
+      color: #fff;
+      margin-top: 25px;
+      width: 35%;
+      border: 1px solid white;
+      padding: 10px;
+      cursor: none;
+      margin-top: 10vh;
+    }
+    
+    .bottone3:hover {
+        background-color:#c03a2bb1;
+     
+        border-color: #d1ceceb1;
+    }
+    
+    .valigia {
+      
+      width: 20%;
+      position: absolute;
+      margin-top: -30vh;
+      margin-left: 45vw;
+      z-index: 1111;
+      filter: drop-shadow(11px 11px 11px rgb(61, 60, 60));
+    }
+    
+
+
+
+/* Footer */
+.footer{
+    background-color: rgb(46, 46, 46);
+    height: 45vh;
+    width: 100vw;
+    position: absolute;
+    margin-top: 665vh;
+    z-index: 2;
+  }
+
+.footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    grid-row-gap: 0.2rem;
+    width:70%;
+    margin-left:15%;
+  }
+.footer-text{
+    flex:1 1 26%;
+    padding:5vh 1vh;
+  }
+.footer-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-top: -2.5vh;
+    color:#F9F9FB;
+    cursor: none;
+}
+.footer-icon:hover b{
+    color:#F9F9FB;
+}
+.footer-desc{
+    font-size: 2.72vh;
+    font-family: "list";
+    font-weight: 300;
+    color: #848484;
+    margin: 4rem 0 4rem;
+  }
+.copyright{
+    font-family: "list";
+    color: #848484;
+    font-size: 1.9vh;
+    font-weight: 200;
+  }
+
+.nav-footer{
+    flex: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.nav-footer-title{
+    font-size: 2.9vh;
+    font-family: "travel";
+    font-weight: bold;
+    color: #F9F9FB;
+    padding-left:2.3vw;
+}
+.nav-footer-item{
+    padding: .45rem 1rem .75rem 0;
+    list-style: none;
+}
+.nav-footer-links{
+    margin-top: 1.5rem;
+}
+.nav-footer-link{
+    font-size: 1.8vh;
+    font-family: "list";
+    font-weight: 400;
+    color: #848484 ;
+    display: block;
+    text-decoration: none;
+    cursor: none;  
+}
+
+.nav-footer-link:hover{
+    color:  #c0392b;
+  }
+ .social-media{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #a5a4a4;
+  }
